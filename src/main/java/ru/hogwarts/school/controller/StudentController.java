@@ -22,7 +22,7 @@ public class StudentController {
     public ResponseEntity <Student> getStudent (@PathVariable Long  id){
         Student student = studentService.findStudent(id);
         if (student == null){
-           return ResponseEntity.notFound().build();
+            return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(student);
     }
